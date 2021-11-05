@@ -18,9 +18,21 @@
       <div class="header">
         <h1>welcome to the bingo board.</h1>
         <p>Enter your bingo spots below and click ADD!</p>
+
+        <input
+          type="text"
+          name="search-bar"
+          id="search-bar"
+          placeholder="search"
+        />
+        <!-- remove after fix -->
+        <pre>please dont hit enter >..</pre>
       </div>
       <div>
         <form id="bingo-form">
+          <input type="checkbox" id="hide" />
+          <label for="hide">hide all</label>
+          <br />
           <input
             class="form-input"
             type="text"

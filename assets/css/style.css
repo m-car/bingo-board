@@ -12,3 +12,11 @@ ul {
 ul li {
   margin: 1.2rem 0;
 }
+
+#bingo-form #hide {
+  width: 30px;
+}
+
+#bingo-form label {
+  line-height: 52px;
+}

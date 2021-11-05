@@ -25,10 +25,46 @@ bingoForm.addEventListener('submit', function (event) {
     //add content
     deleteBtn.innerText = 'delete';
     bingoItem.innerText = bingoValue;
+
     //add classes
-    deleteBtn.className = 'btn btn-danger'
+    deleteBtn.className = 'btn btn-danger delete-btn'
     // append elements
     li.appendChild(bingoItem);
     li.appendChild(deleteBtn);
     bingoList.appendChild(li);
+})
+
+//hide list
+const hideBox = document.querySelector('#hide');
+hideBox.addEventListener('change', function (e) {
+    if (hideBox.checked) {
+        bingoList.style.display = 'none';
+    } else {
+        bingoList.style.display = 'initial';
+    }
+})
+
+// filter bingos
+const searchBar = document.querySelector('#search-bar');
+searchBar.addEventListener('keyup', function (e) {
+    e.preventDefault();
+
+    const term = e.target.value.toLowerCase();
+    const bingos = bingoList.getElementsByTagName('li');
+    Array.from(bingos).forEach(function (bingo) {
+        const title = bingo.firstElementChild.textContent;
+        if (title.toLowerCase().indexOf(term) != -1) {
+            bingo.style.display = 'block';
+        } else {
+            bingo.style.display = 'none';
+        };
+    })
+});
+
+//delete button
+bingoList.addEventListener('click', function (e) {
+    if (e.target.className = 'delete-btn') {
+        const li = e.target.parentElement;
+        bingoList.removeChild(li);
+    }
 })
