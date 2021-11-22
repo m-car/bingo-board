@@ -11,8 +11,8 @@ bingoForm.addEventListener('submit', function (event) {
     if (!bingoValue) {
         return;
     }
-    if (bingoArr.length > 14) {
-        alert('You can only have 14 total!')
+    if (bingoArr.length > 24) {
+        alert('You can only have 25 total!')
         return
     } else {
         bingoArr.push(bingoValue);
@@ -68,3 +68,10 @@ bingoList.addEventListener('click', function (e) {
         bingoList.removeChild(li);
     }
 })
+
+//Shuffle button
+const shuffleBtnEl = document.getElementById('shuffleBtn');
+shuffleBtnEl.addEventListener('click', function (e) {
+    console.log("shuffle clicked")
+})
+// event listener
