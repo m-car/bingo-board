@@ -1,7 +1,7 @@
 main {
-  margin: 3rem auto;
+  /* margin: 3rem auto;
   max-width: 90vw;
-  width: 50ch;
+  width: 50ch; */
 }
 
 ul {
@@ -28,13 +28,24 @@ ul li {
   display: grid;
   padding: 10px;
   grid-gap: 10px;
-  /* grid-template-columns: 150px 150px 150px 150px; */
 }
 
 table,
 th,
 td {
   border: 1px solid black;
+  min-width: fit-content;
+  height: 200px;
   text-align: center;
-  height: 100px;
+}
+.free {
+  background-color: aquamarine;
+}
+
+td:active {
+  background-color: red;
+}
+
+.checked {
+  background-color: red;
 }
